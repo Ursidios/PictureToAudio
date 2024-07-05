@@ -79,7 +79,7 @@ public class PixelExtractor : MonoBehaviour
         {
             float H, S, V;
             Color.RGBToHSV(color, out H, out S, out V);
-            wavelength = H * 600;
+            wavelength = H * 2000;
         }
 
  
