@@ -21,8 +21,8 @@ public class MusicPlayer : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        soundGenerator.gain = pixelExtractor.volume[NoteIndex];
         soundGenerator.frequency = pixelExtractor.frequencysOutput[NoteIndex];
-
         if(Play)
         {
             musicSpeed -= Time.deltaTime;

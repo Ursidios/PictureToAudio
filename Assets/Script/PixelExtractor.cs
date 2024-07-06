@@ -9,6 +9,8 @@ public class PixelExtractor : MonoBehaviour
     public List<float> frequencysOutput;
     public bool useHUE;
 
+    public float tunerANote = 400;
+    public List<float> volume;
 
     void Start()
     {
@@ -74,16 +76,18 @@ public class PixelExtractor : MonoBehaviour
                 // Azul dominante
                 wavelength = 450 - (b * 70);  // Intervalo aproximado 450-495 nm
             }  
+            
         }
         else
         {
             float H, S, V;
             Color.RGBToHSV(color, out H, out S, out V);
-            wavelength = H * 2000;
+            wavelength = H * (tunerANote * 2) + (S * tunerANote);
+            volume.Add(V);
         }
 
  
-
+    
         return wavelength;
     }
     // Método para converter comprimento de onda (nm) em frequência (THz)

@@ -376,7 +376,7 @@ MonoBehaviour:
   soundGenerator: {fileID: 437131621}
   pixelExtractor: {fileID: 1891190409}
   Play: 1
-  musicSpeedInicial: 0.001
+  musicSpeedInicial: 0.01
   musicSpeed: 0
   NoteIndex: 0
 --- !u!1 &1891190407
@@ -429,7 +429,9 @@ MonoBehaviour:
   meshRenderer: {fileID: 0}
   texture: {fileID: 0}
   frequencysOutput: []
-  useHUE: 0
+  useHUE: 1
+  tunerANote: 440
+  volume: []
 --- !u!64 &1891190410
 MeshCollider:
   m_ObjectHideFlags: 0
