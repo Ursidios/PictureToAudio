@@ -83,7 +83,7 @@ public class PixelExtractor : MonoBehaviour
             float H, S, V;
             Color.RGBToHSV(color, out H, out S, out V);
             wavelength = H * (tunerANote * 2) + (S * tunerANote);
-            volume.Add(V);
+            //volume.Add(V);
         }
 
  
